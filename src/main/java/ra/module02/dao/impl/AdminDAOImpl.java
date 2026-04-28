@@ -24,7 +24,7 @@ public class AdminDAOImpl implements IAdminDAO {
             pstmt.setString(2, password);
 
             rs = pstmt.executeQuery();
-            if (rs.next()) { // có dữ liệu => login thành công
+            if (rs.next()) {
                 result = true;
             }
         } catch (Exception e) {
