@@ -42,6 +42,25 @@ public class Input {
         }
     }
 
+    public static Long getALong(String inputInt) {
+        while (true) {
+            try {
+                System.out.print(inputInt);
+                String input = sc.nextLine().trim();
+
+                if (input.isEmpty()) {
+                    System.out.println("Không được để trống!");
+                    continue;
+                }
+
+                return Long.parseLong(input);
+
+            } catch (NumberFormatException e) {
+                System.out.println("Vui lòng nhập số hợp lệ!");
+            }
+        }
+    }
+
     public static BigDecimal getBigDecimal(String inputBigDecimal) {
         while (true) {
             try {
