@@ -9,12 +9,14 @@ public class Application {
     private ProductMenu productMenu;
     private CustomerMenu customerMenu;
     private InvoiceMenu invoiceMenu;
+    private StatisticMenu statisticMenu;
 
     public Application() {
         this.adminService = new AdminServiceImpl();
         this.productMenu = new ProductMenu();
         this.customerMenu = new CustomerMenu();
         this.invoiceMenu = new InvoiceMenu();
+        this.statisticMenu = new StatisticMenu();
     }
 
     public void start() {
@@ -91,6 +93,9 @@ public class Application {
                     break;
                 case 3:
                     invoiceMenu.showMenu();
+                    break;
+                case 4:
+                    statisticMenu.showMenu();
                     break;
                 case 5:
                     if (confirmLogout()) {
